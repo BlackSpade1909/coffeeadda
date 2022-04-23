@@ -1,0 +1,27 @@
+<% for(var i = 0; i < product.length; i++) { %>
+    <!-- <tr style="border: 1px solid black;"> -->
+        <div class="menustyle" style="display:flex;">
+            <!-- <p><%= i + 1 %></p> -->
+            <div class="menuimage">
+            <center><img class="imaage" src="https://baristajoy.com/wp-content/uploads/2021/11/espresso-expresso.png " style="height:300px;width: 300px"></center>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="menudetails" >
+                    <h1><%= product[i].product_name %></h1>
+        
+                    <p><%= product[i].product_desc %></p>
+                    <%var quantity= product[i].product_price %>
+                    <p><%= quantity %></p>
+
+                    <!-- Quantity: <input type="text" name="qty" id="qty"> -->
+                    <!-- <% var q=product[i].product_price.value %> -->
+
+                    
+                    
+            </div>
+            <!-- <div data-ng-app="" data-ng-init=""> -->
+                <!-- Quantity: <input type="number" ng-model="quantity"> -->
+                <!-- <p><b>Total in dollar:</b> {{quantity * <%= product[i].product_price %> }}</p> -->
+              <!-- </div> -->
+        </div>
+        <div style="height:5%"></div>
+    <% } %>

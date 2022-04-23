@@ -1,0 +1,157 @@
+<!-- LEFT FOR INTERNAL CSS -->
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+<link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <title>Menu</title>
+
+</head>
+
+<body>
+  <%- include('include/_header')%>
+    <strong>
+      <h1 style="text-align:center; font-family: 'Charm', cursive; font-size:35px">Our Menu</h1>
+    </strong>
+    <hr style="border: solid 1px brown;">
+    <p style="text-align: center; font-size: 25px; font-weight: 300; font-family: 'Charm', cursive;">Explore Our Hot and Cold Beverges Menu</p>
+    <!-- <table id="order-listing" class="center" style="border: 1px solid black;
+                        border-collapse: collapse;margin-left: auto;">
+                            <thead>
+                                <tr style="border: 1px solid black;">
+                                    <th style="border: 1px solid black;">NO </th>
+                                    <th style="border: 1px solid black;">UserName </th>
+                                    <th style="border: 1px solid black;">Feedback Description </th>
+                                </tr>
+                            </thead>
+                            <tbody> -->
+                <%- include('include/_showMenu') %>
+                
+                Quantity: <input type="text" name="qty" id="qty">
+                
+              
+                <center><button type="submit" class="raise" onclick="findTotal()">Place Order<i class="ti-shopping-cart-full ml-2"></i></button></center>
+                
+                <!-- <script type="text/javascript">
+                  function findTotal() 
+                  {
+                      var arr = document.getElementById('qty'); -->
+                      <!-- //var tot = 0;
+                      /*for (var i = 0; i < arr.length; i++) {
+                          if (parseInt(arr[i].value))
+                              tot += parseInt(arr[i].value);
+                      }
+                      document.getElementById('grandTotal').value = tot;*/
+                      //console.log(arr);
+                      //console.log(tot);
+                      window.alert(arr);
+                  }
+              </script> -->
+            <!-- </tbody>
+        </table> -->
+    <!-- <div class="slideshow-container"> -->
+    <!-- <% for(var i=0; i < product.length; i++) { %> -->
+      <!-- <div class="flex-child"> -->
+      <!-- <h3 style="text-align: center;"><u>Coffee Types</u></h3>
+      <center><img src="https://baristajoy.com/wp-content/uploads/2021/11/espresso-expresso.png" style="width:80%">
+      </center>
+      <br>
+      <div class="flex-sub-container">
+        <div class="flex-child2">
+          <p id="product_name" name="product_name" style="text-align:center">
+            <%= product[i].product_name %>
+          </p>
+          <center><img
+              src="https://cdn-prod.medicalnewstoday.com/content/images/articles/292/292160/a-cup-of-black-tea.jpg"
+              style="width:50%" style="height:50%"></center>
+          <br>
+          <p id="product_desc" name="product_desc" style="text-align:center">
+            <%= product[i].product_desc %>
+          </p>
+          <p id="product_price" name="product_price" style="text-align:center">
+            <%= product[i].product_price %>
+          </p>
+
+          <div data-ng-app="" data-ng-init="quantity=1;price=5">
+            Quantity: <input type="number" ng-model="quantity">
+            <p><b>Total in dollar:</b> {{quantity * <%= product[i].product_price %> }}</p>
+          </div>
+          <div class="col-12 col-lg-auto">
+            <center><button type="submit" class="btn btn-block btn-dark mb-2" onclick="myFunc()">Add to Cart <i class="ti-shopping-cart-full ml-2"></i></button></center> -->
+            <!-- <center><button type="submit" class="btn btn-block btn-dark mb-2">Add to Cart <i
+                  class="ti-shopping-cart-full ml-2"></i></button></center>
+          </div> -->
+
+        <!-- </div> -->
+<!-- 
+        <% i++; %>
+
+          <div class="flex-child2">
+            <p id="product_name" name="product_name" style="text-align:center">
+              <%= product[i].product_name %>
+            </p>
+            <center><img
+                src="https://cdn-prod.medicalnewstoday.com/content/images/articles/292/292160/a-cup-of-black-tea.jpg"
+                style="width:50%" style="height:50%"></center>
+            <br>
+            <p id="product_desc" name="product_desc" style="text-align:center">
+              <%= product[i].product_desc %>
+            </p>
+            <p id="product_price" name="product_price" style="text-align:center">
+              <%= product[i].product_price %>
+            </p>
+
+            <div data-ng-app="" data-ng-init="quantity=1;price=5">
+              Quantity: <input type="number" ng-model="quantity">
+              <p><b>Total in dollar:</b> {{quantity * <%= product[i].product_price %> }}</p>
+            </div> -->
+            <!-- <div class="col-12 col-lg-auto"> -->
+              <!-- <center><button type="submit" class="btn btn-block btn-dark mb-2" onclick="myFunc()">Add to Cart <i class="ti-shopping-cart-full ml-2"></i></button></center> -->
+              <!-- <center><button type="submit" class="btn btn-block btn-dark mb-2">Add to Cart <i
+                    class="ti-shopping-cart-full ml-2"></i></button></center>
+            </div>
+
+          </div>
+
+          <% i++; %>
+
+            <div class="flex-child2">
+              <p id="product_name" name="product_name" style="text-align:center">
+                <%= product[i].product_name %>
+              </p>
+              <center><img
+                  src="https://cdn-prod.medicalnewstoday.com/content/images/articles/292/292160/a-cup-of-black-tea.jpg"
+                  style="width:50%" style="height:50%"></center>
+              <br>
+              <p id="product_desc" name="product_desc" style="text-align:center">
+                <%= product[i].product_desc %>
+              </p>
+              <p id="product_price" name="product_price" style="text-align:center">
+                <%= product[i].product_price %>
+              </p>
+
+              <div data-ng-app="" data-ng-init="quantity=1;price=5">
+                Quantity: <input type="number" ng-model="quantity">
+                <p><b>Total in dollar:</b> {{quantity * <%= product[i].product_price %> }}</p>
+              </div>
+              <div class="col-12 col-lg-auto"> -->
+                <!-- <center><button type="submit" class="btn btn-block btn-dark mb-2" onclick="myFunc()">Add to Cart <i class="ti-shopping-cart-full ml-2"></i></button></center> -->
+                <!-- <center><button type="submit" class="btn btn-block btn-dark mb-2">Add to Cart <i
+                      class="ti-shopping-cart-full ml-2"></i></button></center>
+              </div>
+
+            </div>
+      </div> -->
+      
+      <!-- </div>
+      </div>
+      <% } %> -->
+</body>
+
+
+</html>
